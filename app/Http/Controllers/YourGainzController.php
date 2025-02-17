@@ -12,4 +12,8 @@ class YourGainzController extends Controller
     public function menuimc(){
         return view('yourgainz.menuimc');
     }
+    public function menurutinas(){
+        return view('yourgainz.menurutinas');
+    }
+    
 }
