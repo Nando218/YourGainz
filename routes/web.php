@@ -20,6 +20,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/home', [YourGainzController::class, 'home'])->name('yourgainz.home');
 Route::get('/imc', [YourGainzController::class, 'menuimc'])->name('yourgainz.menuimc');
+Route::get('/menurutinas', [YourGainzController::class, 'menurutinas'])->name('yourgainz.menurutinas');
 
 
 require __DIR__.'/auth.php';
