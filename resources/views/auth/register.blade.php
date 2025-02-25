@@ -6,7 +6,6 @@
     <title>Registro</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Configuración de fondo en mosaico */
         body {
             background-image: url('https://res.cloudinary.com/dd5hetwb8/image/upload/v1739967517/wallpaper2_nxxxpp.png');
             background-repeat: repeat;
@@ -73,17 +72,15 @@
         document.getElementById('registerForm').addEventListener('submit', function(event) {
             let valid = true;
 
-            // Validación del nombre (mínimo 4 caracteres)
             const name = document.getElementById('name');
             const nameError = document.getElementById('nameError');
-            if (name.value.length < 4) {
+            if (name.value.length < 3) {
                 nameError.classList.remove('hidden');
                 valid = false;
             } else {
                 nameError.classList.add('hidden');
             }
 
-            // Validación de la contraseña (mínimo 8 caracteres)
             const password = document.getElementById('password');
             const passwordError = document.getElementById('passwordError');
             if (password.value.length < 8) {
@@ -93,7 +90,6 @@
                 passwordError.classList.add('hidden');
             }
 
-            // Validación del peso (mayor que 1)
             const weight = document.getElementById('weight');
             const weightError = document.getElementById('weightError');
             if (parseFloat(weight.value) <= 1) {
@@ -103,7 +99,6 @@
                 weightError.classList.add('hidden');
             }
 
-            // Validación de la altura (mayor que 1)
             const height = document.getElementById('height');
             const heightError = document.getElementById('heightError');
             if (parseFloat(height.value) <= 1) {
@@ -113,7 +108,6 @@
                 heightError.classList.add('hidden');
             }
 
-            // Si hay errores, evitar el envío del formulario
             if (!valid) {
                 event.preventDefault();
             }

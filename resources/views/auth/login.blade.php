@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://res.cloudinary.com/dgzgzx9ov/image/upload/v1739966822/YourGainz_Logo_Completo_1_gsl94c.png" type="image/x-icon">
     <title>Iniciar Sesión</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Configuración de fondo en mosaico */
         body {
             background-image: url('https://res.cloudinary.com/dd5hetwb8/image/upload/v1739967517/wallpaper2_nxxxpp.png');
             background-repeat: repeat;
@@ -44,7 +44,9 @@
                 <a href="{{ route('password.request') }}" class="text-gray-100 text-sm">¿Olvidaste tu contraseña?</a>
             @endif
         </div>
-
+        <div class="flex justify-between items-center mb-4">
+            <a href="{{ route('register') }}" class="text-gray-100 text-sm">¿No tienes cuenta? Registrate</a>
+        </div>
         <button type="submit" class="w-full bg-[#FFF700] text-black py-2 rounded-lg hover:bg-[#F2C464] transition">
             Iniciar Sesión
         </button>
@@ -54,7 +56,6 @@
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             let valid = true;
 
-            // Validación del email
             const email = document.getElementById('email');
             const emailError = document.getElementById('emailError');
             const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -65,17 +66,15 @@
                 emailError.classList.add('hidden');
             }
 
-            // Validación de la contraseña (mínimo 6 caracteres)
             const password = document.getElementById('password');
             const passwordError = document.getElementById('passwordError');
-            if (password.value.length < 6) {
+            if (password.value.length < 8) {
                 passwordError.classList.remove('hidden');
                 valid = false;
             } else {
                 passwordError.classList.add('hidden');
             }
 
-            // Si hay errores, evitar el envío del formulario
             if (!valid) {
                 event.preventDefault();
             }
