@@ -17,44 +17,44 @@
     <form method="POST" action="{{ route('register') }}" class="bg-white bg-opacity-10 p-8 rounded-2xl shadow-md w-96 filter backdrop-blur-sm" id="registerForm">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-        <h2 class="text-2xl text-white font-semibold text-center text-gray-700 mb-6">Crear Cuenta</h2>
+        <h2 class="text-2xl text-white font-semibold text-center mb-6">Crear Cuenta</h2>
 
         <div class="mb-4">
-            <label for="name" class="block text-white text-sm font-medium text-gray-600">Usuario</label>
-            <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus 
+            <label for="name" class="block text-white text-sm font-medium ">Usuario</label>
+            <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus
                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
             <p class="text-red-500 text-sm mt-1 hidden" id="nameError">Debe tener más de 3 caracteres.</p>
         </div>
 
         <div class="mb-4">
-            <label for="email" class="block text-white text-sm font-medium text-gray-600">Email</label>
-            <input id="email" type="email" name="email" value="{{ old('email') }}" required 
+            <label for="email" class="block text-white text-sm font-medium ">Email</label>
+            <input id="email" type="email" name="email" value="{{ old('email') }}" required
                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
         </div>
 
         <div class="mb-4">
-            <label for="password" class="block text-white text-sm font-medium text-gray-600">Contraseña</label>
-            <input id="password" type="password" name="password" required 
+            <label for="password" class="block text-white text-sm font-medium ">Contraseña</label>
+            <input id="password" type="password" name="password" required
                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
             <p class="text-red-500 text-sm mt-1 hidden" id="passwordError">Debe tener al menos 8 caracteres.</p>
         </div>
 
         <div class="mb-4">
-            <label for="password_confirmation" class="block text-white text-sm font-medium text-gray-600">Confirmar Contraseña</label>
-            <input id="password_confirmation" type="password" name="password_confirmation" required 
+            <label for="password_confirmation" class="block text-white text-sm font-medium ">Confirmar Contraseña</label>
+            <input id="password_confirmation" type="password" name="password_confirmation" required
                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
         </div>
 
         <div class="mb-4">
-            <label for="weight" class="block text-white text-sm font-medium text-gray-600">Peso (KG)</label>
-            <input id="weight" type="number" name="weight" value="{{ old('weight') }}" required 
+            <label for="weight" class="block text-white text-sm font-medium ">Peso (KG)</label>
+            <input id="weight" type="number" name="weight" value="{{ old('weight') }}" required
                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
             <p class="text-red-500 text-sm mt-1 hidden" id="weightError">Debe ser mayor que 1 kg.</p>
         </div>
 
         <div class="mb-4">
-            <label for="height" class="block text-white text-sm font-medium text-gray-600">Altura (CM)</label>
-            <input id="height" type="number" name="height" value="{{ old('height') }}" required 
+            <label for="height" class="block text-white text-sm font-medium ">Altura (CM)</label>
+            <input id="height" type="number" name="height" value="{{ old('height') }}" required
                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
             <p class="text-red-500 text-sm mt-1 hidden" id="heightError">Debe ser mayor que 1 cm.</p>
         </div>
