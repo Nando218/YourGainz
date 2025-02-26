@@ -21,9 +21,17 @@
                 background-size: 100px 100px;
             }
         </style>
+        <style>
+            body {
+                background-image: url('https://res.cloudinary.com/dd5hetwb8/image/upload/v1739967517/wallpaper2_nxxxpp.png');
+                background-repeat: repeat;
+                background-size: 100px 100px;
+            }
+        </style>
     </head>
     <body class="font-sans antialiased">
 
+        <div class="min-h-screen">
         <div class="min-h-screen">
             @include('layouts.navigation')
 
