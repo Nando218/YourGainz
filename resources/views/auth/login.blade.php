@@ -31,7 +31,7 @@
             <label for="password" class="block text-white text-sm font-medium">Contraseña</label>
             <input id="password" type="password" name="password" required 
                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
-            <p class="text-red-500 text-sm mt-1 hidden" id="passwordError">Debe tener al menos 6 caracteres.</p>
+            <p class="text-red-500 text-sm mt-1 hidden" id="passwordError">Debe tener al menos 8 caracteres.</p>
         </div>
 
         <div class="mb-4 flex items-center">
