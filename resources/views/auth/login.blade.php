@@ -18,18 +18,18 @@
     <form method="POST" action="{{ route('login') }}" class="bg-white bg-opacity-10 p-8 rounded-2xl shadow-md w-96 filter backdrop-blur-sm" id="loginForm">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-        <h2 class="text-2xl text-white font-semibold text-center text-gray-700 mb-6">Iniciar Sesión</h2>
+        <h2 class="text-2xl text-white font-semibold text-center mb-6">Iniciar Sesión</h2>
 
         <div class="mb-4">
             <label for="email" class="block text-white text-sm font-medium">Correo Electrónico</label>
-            <input id="email" type="email" name="email" value="{{ old('email') }}" required 
+            <input id="email" type="email" name="email" value="{{ old('email') }}" required
                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
             <p class="text-red-500 text-sm mt-1 hidden" id="emailError">Ingrese un correo válido.</p>
         </div>
 
         <div class="mb-4">
             <label for="password" class="block text-white text-sm font-medium">Contraseña</label>
-            <input id="password" type="password" name="password" required 
+            <input id="password" type="password" name="password" required
                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
             <p class="text-red-500 text-sm mt-1 hidden" id="passwordError">Debe tener al menos 6 caracteres.</p>
         </div>

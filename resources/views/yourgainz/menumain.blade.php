@@ -20,18 +20,24 @@
             </div>
 
             <div class=" flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 md:mt-6">
-                <button
-                    class="bg-[#FFF700] hover:bg-[#e2dc2e] text-gray-900 font-bold py-2 px-4 rounded-3xl flex items-center justify-center w-full md:w-40">
-                    <i class="fas fa-list-ul mr-2"></i> RUTINAS
-                </button>
-                <button
-                    class="bg-[#FFF700] hover:bg-[#e2dc2e] text-gray-900 font-bold py-2 px-4 rounded-3xl flex items-center justify-center w-full md:w-40">
-                    <i class="fas fa-dumbbell mr-2"></i> EJERCICIOS
-                </button>
-                <button
-                    class="bg-[#FFF700] hover:bg-[#e2dc2e] text-gray-900 font-bold py-2 px-4 rounded-3xl flex items-center justify-center w-full md:w-40">
-                    <i class="fas fa-eye mr-2"></i> IMC
-                </button>
+                <a href="">
+                    <button
+                        class="bg-[#FFF700] hover:bg-[#e2dc2e] text-gray-900 font-bold py-2 px-4 rounded-3xl flex items-center justify-center w-full md:w-40">
+                        <i class="fas fa-list-ul mr-2"></i> RUTINAS
+                    </button>
+                </a>
+                <a href="">
+                    <button
+                        class="bg-[#FFF700] hover:bg-[#e2dc2e] text-gray-900 font-bold py-2 px-4 rounded-3xl flex items-center justify-center w-full md:w-40">
+                        <i class="fas fa-dumbbell mr-2"></i> EJERCICIOS
+                    </button>
+                </a>
+                <a href="{{ route('yourgainz.menuimc') }}">
+                    <button
+                        class="bg-[#FFF700] hover:bg-[#e2dc2e] text-gray-900 font-bold py-2 px-4 rounded-3xl flex items-center justify-center w-full md:w-40">
+                        <i class="fas fa-eye mr-2"></i> IMC
+                    </button>
+                </a>
             </div>
         </div>
     </div>

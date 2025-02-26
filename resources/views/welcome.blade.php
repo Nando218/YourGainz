@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="https://res.cloudinary.com/dgzgzx9ov/image/upload/v1739966822/YourGainz_Logo_Completo_1_gsl94c.png" type="image/x-icon">
 
-        <title>Laravel</title>
+        <title>YourGainz</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
