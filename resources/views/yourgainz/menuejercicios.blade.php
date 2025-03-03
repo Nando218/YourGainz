@@ -39,7 +39,7 @@
             const muscleMapping = {
                 'Pecho': 'chest',
                 'Espalda': 'back',
-                'Hombros': 'shoulders',
+                'Hombros': 'shoulder',
                 'Brazos': 'biceps',
                 'Piernas': 'quads',
                 'Abdominales': 'abdominals'
