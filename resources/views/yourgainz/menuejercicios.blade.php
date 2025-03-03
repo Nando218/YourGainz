@@ -104,7 +104,7 @@
                     <div class="bg-white text-black p-4 rounded shadow-lg text-center">
                         <h3 class="font-semibold">${exercise.name}</h3>
                         <p class="text-sm text-gray-600">${exercise.description}</p>
-                        <img src="https://via.placeholder.com/150" alt="${exercise.name}" class="w-36 h-36 mx-auto mt-2">
+                        <img src="${exercise.video}" class="w-full h-auto mt-2" />
                     </div>
                 `).join('');
             }
