@@ -1,8 +1,8 @@
 <x-app-layout>
 
     <div class="p-6 text-gray-900">
-        <div class="container mx-auto p-4">
-            <div class="flex justify-center mb-6">
+        <div class="container mx-auto p-2">
+            <div class="flex justify-center mb-2">
                 <img src="https://res.cloudinary.com/dgzgzx9ov/image/upload/v1739966822/YourGainz_Logo_Completo_1_gsl94c.png"
                     alt="YourGainz Logo" class="h-60 md:h-60 lg:h-180">
             </div>
@@ -15,7 +15,7 @@
                     <h3 class="text-xl lg:text-2xl font-semibold ml-12">{{ Auth::user()->name }}</h3>
                     <p class="text-lg lg:text-xl ml-12">Peso: {{ Auth::user()->weight }}</p>
                     <p class="text-lg lg:text-xl ml-12">Altura: {{ Auth::user()->height }}</p>
-                    <p class="text-lg lg:text-xl ml-12">IMC: Poner función</p>
+                    <p class="text-lg lg:text-xl ml-12">IMC: {{auth()->user()->height > 0 ? auth()->user()->weight / ((auth()->user()->height / 100) ** 2) : null}}</p>
                 </div>
             </div>
 
