@@ -22,7 +22,7 @@
                     RUTINAS RECOMENDADAS
                 </button>
                 <img src="https://res.cloudinary.com/dgzgzx9ov/image/upload/v1740576103/image_34_mblsdu.png" alt="Imagen encima del botón de CREAR NUEVA RUTINA" class="w-20 h-auto">
-                <button
+                <button on
                     class="bg-[#FFF700] text-black text-sm font-bold py-2 px-6 rounded-full shadow-md hover:bg-black hover:text-[#FFF700] hover:ring-2 hover:ring-[#FFF700] transition-all">
                     CREAR NUEVA RUTINA
                 </button>

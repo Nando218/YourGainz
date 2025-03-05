@@ -18,15 +18,15 @@
 
     <x-modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
         <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <form method="post" action="{{ route('profile.destroy') }}" class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg w-full max-w-md">
+            <form method="post" action="{{ route('profile.destroy') }}" class="p-6 bg-white  bg-gray-800 rounded-lg shadow-lg w-full max-w-md">
                 @csrf
                 @method('delete')
 
-                <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+                <h2 class="text-lg font-medium text-gray-900  text-gray-100">
                     {{ __('¿Estás seguro de que quieres eliminar tu cuenta?') }}
                 </h2>
 
-                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                <p class="mt-1 text-sm text-gray-600  text-gray-400">
                     {{ __('Una vez eliminada, no podrás recuperar los datos de tu proceso.') }}
                 </p>
 
