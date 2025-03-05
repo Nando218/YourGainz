@@ -6,7 +6,7 @@
             <div class="flex justify-start">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('yourgainz.home') }}">
                         <x-application-logo/>
                     </a>
                 </div>
@@ -63,8 +63,8 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            <x-responsive-nav-link :href="route('yourgainz.home')" :active="request()->routeIs('yourgainz.home')">
+                {{ __('Home') }}
             </x-responsive-nav-link>
         </div>
 
@@ -94,6 +94,6 @@
         </div>
     </div>
 </nav>
-<div class="w-full h-[60px] bg-gradient-to-b from-black to-transparent">
+<div class="w-full h-[60px] absolute bg-gradient-to-b from-black to-transparent">
     <!-- Contenido aquí -->
 </div>

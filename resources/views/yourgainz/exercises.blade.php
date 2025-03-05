@@ -33,7 +33,7 @@
     }
 
     try {
-        const response = await fetch(`/exercises/${muscle}`);
+        const response = await fetch(`/exercise/${muscle}`);
         const data = await response.json();
 
         if (data.error) {
@@ -53,14 +53,16 @@
 
 function showExercise(name, description, video) {
     Swal.fire({
-        title: name,
+        title: `<span style="color: #fff700">${name}</span>`,
         html: `<p>${description}</p>` +
             `<div class="mt-4"><img src="${video}" class="w-full h-auto" /></div>`,
-        showCancelButton: true,
-        confirmButtonText: 'Agregar ejercicio',
-        cancelButtonText: 'Cancelar',
+        showConfirmButton: false,
         background: '#1a202c', // Fondo oscuro
-        color: '#fff'         // Texto blanco
+        color: '#fff',         // Texto blanco
+        showCancelButton: true,
+        cancelButtonText: 'Cerrar',
+        cancelButtonColor: 'gray',
+        cancelButtonClass: 'bg-gray-800 hover:bg-gray-700'
     });
 }
 

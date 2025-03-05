@@ -21,16 +21,16 @@ Route::middleware('auth')->group(function () {
     
     Route::get('/home', [YourGainzController::class, 'home'])->name('yourgainz.home');
 Route::get('/imc', [YourGainzController::class, 'menuimc'])->name('yourgainz.menuimc');
-Route::get('/menurutinas', [YourGainzController::class, 'menurutinas'])->name('yourgainz.menurutinas');
+Route::get('/routines', [YourGainzController::class, 'routines'])->name('yourgainz.routines');
 Route::get('/menumain', [YourGainzController::class, 'menumain'])->name('yourgainz.menumain');
-Route::get('/menuejercicios', [YourGainzController::class, 'menuejercicios'])->name('yourgainz.menuejercicios');
+Route::get('/exercises', [YourGainzController::class, 'exercises'])->name('yourgainz.exercises');
 });
 
 
 
 
-Route::get('/menuejercicios', [ExerciseController::class, 'index']);
-Route::get('/exercises/{muscle}', [ExerciseController::class, 'getExercises']);
+Route::get('/exercise', [ExerciseController::class, 'index']);
+Route::get('/exercise/{muscle}', [ExerciseController::class, 'getExercises']);
 
 
 

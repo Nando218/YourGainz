@@ -12,14 +12,12 @@ class YourGainzController extends Controller
     public function menuimc(){
         return view('yourgainz.menuimc');
     }
-    public function menurutinas(){
-        return view('yourgainz.menurutinas');
+    public function routines(){
+        return view('yourgainz.routines');
     }
-    public function menumain(){
-        return view('yourgainz.menumain');
-    }
-    public function menuejercicios(){
-        return view('yourgainz.menuejercicios');
+    
+    public function exercises(){
+        return view('yourgainz.exercises');
     }
 
 }
