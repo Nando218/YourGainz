@@ -47,6 +47,18 @@
             @endif
         </div>
 
+        <div>
+            <x-input-label for="height" :value="__('Altura')" />
+            <x-text-input id="height" name="height" type="text" class="mt-1 block w-full" :value="old('height', $user->height)" required autocomplete="height" />
+            <x-input-error class="mt-2" :messages="$errors->get('height')" />
+        </div>
+
+        <div>
+            <x-input-label for="weight" :value="__('Peso')" />
+            <x-text-input id="weight" name="weight" type="text" class="mt-1 block w-full" :value="old('weight', $user->weight)" required autocomplete="weight" />
+            <x-input-error class="mt-2" :messages="$errors->get('weight')" />
+        </div>
+
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Guardar') }}</x-primary-button>
 
