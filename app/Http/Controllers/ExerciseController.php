@@ -9,7 +9,7 @@ class ExerciseController extends Controller
 {
     public function index()
     {
-        return view('yourgainz.menuejercicios');
+        return view('yourgainz.exercises');
     }
 
     public function getExercises($muscle)
