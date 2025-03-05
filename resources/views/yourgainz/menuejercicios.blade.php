@@ -19,35 +19,51 @@
         </main>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         document.getElementById('muscleSelect').addEventListener('change', async function () {
-            const muscle = this.value;
-            const grid = document.getElementById('exerciseGrid');
-            grid.innerHTML = '<p class="text-white text-center col-span-full">Cargando...</p>';
+    const muscle = this.value;
+    const grid = document.getElementById('exerciseGrid');
+    grid.innerHTML = '<p class="text-white text-center col-span-full">Cargando...</p>';
 
-            if (!muscle) {
-                grid.innerHTML = '<p class="text-white text-center col-span-full">Selecciona un músculo</p>';
-                return;
-            }
+    if (!muscle) {
+        grid.innerHTML = '<p class="text-white text-center col-span-full">Selecciona un músculo</p>';
+        return;
+    }
 
-            try {
-                const response = await fetch(`/exercises/${muscle}`);
-                const data = await response.json();
+    try {
+        const response = await fetch(`/exercises/${muscle}`);
+        const data = await response.json();
 
-                if (data.error) {
-                    grid.innerHTML = `<p class="text-white text-center col-span-full">${data.error}</p>`;
-                } else {
-                    grid.innerHTML = data.map(exercise => `
-                        <div class="bg-white text-black p-4 rounded shadow-lg text-center">
-                            <h3 class="font-semibold">${exercise.name}</h3>
-                            <img src="${exercise.video}" class="w-full h-auto mt-2" />
-                        </div>
-                    `).join('');
-                }
-            } catch (error) {
-                grid.innerHTML = '<p class="text-white text-center col-span-full">Error al cargar los ejercicios.</p>';
-            }
-        });
+        if (data.error) {
+            grid.innerHTML = `<p class="text-white text-center col-span-full">${data.error}</p>`;
+        } else {
+            grid.innerHTML = data.map(exercise => `
+                <div class="bg-white text-black p-4 rounded shadow-lg text-center cursor-pointer" onclick="showExercise('${exercise.nombre}', '${exercise.descripcion}', '${exercise.video}')">
+                    <h3 class="font-semibold">${exercise.nombre}</h3>
+                    <img src="${exercise.video}" class="w-full h-auto mt-2" />
+                </div>
+            `).join('');
+        }
+    } catch (error) {
+        grid.innerHTML = '<p class="text-white text-center col-span-full">Error al cargar los ejercicios.</p>';
+    }
+});
+
+function showExercise(name, description, video) {
+    Swal.fire({
+        title: name,
+        html: `<p>${description}</p>` +
+            `<div class="mt-4"><img src="${video}" class="w-full h-auto" /></div>`,
+        showCancelButton: true,
+        confirmButtonText: 'Agregar ejercicio',
+        cancelButtonText: 'Cancelar',
+        background: '#1a202c', // Fondo oscuro
+        color: '#fff'         // Texto blanco
+    });
+}
+
     </script>
 </body>
 </x-app-layout>
