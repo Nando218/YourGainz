@@ -19,7 +19,7 @@
             <div class="hidden sm:flex sm:items-center sm:ms-6 mt-4 ">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
-                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 rounded-md text-[#FFF700] font-bold bg-white dark:bg-black hover:text-white dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150 ">
+                        <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 rounded-md text-[#FFF700] font-bold bg-black hover:text-white dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150 ">
                             <div>{{ Auth::user()->name }}</div>
 
                             <div class="ms-1">

@@ -1,11 +1,11 @@
 <section>
     <header>
-        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-            {{ __('Profile Information') }}
+        <h2 class="text-lg font-medium text-gray-100">
+            {{ __('Información general') }}
         </h2>
 
-        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            {{ __("Update your account's profile information and email address.") }}
+        <p class="mt-1 text-sm text-gray-200">
+            {{ __("Actualizar nombre y correo electrónico") }}
         </p>
     </header>
 
@@ -18,7 +18,7 @@
         @method('patch')
 
         <div>
-            <x-input-label for="name" :value="__('Name')" />
+            <x-input-label for="name" :value="__('Nombre')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
@@ -47,8 +47,20 @@
             @endif
         </div>
 
+        <div>
+            <x-input-label for="height" :value="__('Altura')" />
+            <x-text-input id="height" name="height" type="text" class="mt-1 block w-full" :value="old('height', $user->height)" required autocomplete="height" />
+            <x-input-error class="mt-2" :messages="$errors->get('height')" />
+        </div>
+
+        <div>
+            <x-input-label for="weight" :value="__('Peso')" />
+            <x-text-input id="weight" name="weight" type="text" class="mt-1 block w-full" :value="old('weight', $user->weight)" required autocomplete="weight" />
+            <x-input-error class="mt-2" :messages="$errors->get('weight')" />
+        </div>
+
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button>{{ __('Guardar') }}</x-primary-button>
 
             @if (session('status') === 'profile-updated')
                 <p
@@ -57,7 +69,7 @@
                     x-transition
                     x-init="setTimeout(() => show = false, 2000)"
                     class="text-sm text-gray-600 dark:text-gray-400"
-                >{{ __('Saved.') }}</p>
+                >{{ __('Perfil Actualizado') }}</p>
             @endif
         </div>
     </form>
