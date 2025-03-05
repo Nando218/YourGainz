@@ -20,7 +20,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     
     Route::get('/home', [YourGainzController::class, 'home'])->name('yourgainz.home');
-Route::get('/imc', [YourGainzController::class, 'menuimc'])->name('yourgainz.menuimc');
+Route::get('/imc', [YourGainzController::class, 'imc'])->name('yourgainz.imc');
 Route::get('/routines', [YourGainzController::class, 'routines'])->name('yourgainz.routines');
 Route::get('/menumain', [YourGainzController::class, 'menumain'])->name('yourgainz.menumain');
 Route::get('/exercises', [YourGainzController::class, 'exercises'])->name('yourgainz.exercises');
