@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\YourGainzController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ExerciseController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,6 +25,13 @@ Route::get('/menurutinas', [YourGainzController::class, 'menurutinas'])->name('y
 Route::get('/menumain', [YourGainzController::class, 'menumain'])->name('yourgainz.menumain');
 Route::get('/menuejercicios', [YourGainzController::class, 'menuejercicios'])->name('yourgainz.menuejercicios');
 });
+
+
+
+
+Route::get('/menuejercicios', [ExerciseController::class, 'index']);
+Route::get('/exercises/{muscle}', [ExerciseController::class, 'getExercises']);
+
 
 
 
