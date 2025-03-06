@@ -15,9 +15,13 @@ class YourGainzController extends Controller
     public function routines(){
         return view('yourgainz.routines');
     }
-    
+
     public function exercises(){
         return view('yourgainz.exercises');
+    }
+
+    public function recommendedroutines(){
+        return view('yourgainz.recommendedroutines');
     }
 
 }

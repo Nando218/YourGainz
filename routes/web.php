@@ -18,12 +18,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    
+
     Route::get('/home', [YourGainzController::class, 'home'])->name('yourgainz.home');
-Route::get('/imc', [YourGainzController::class, 'menuimc'])->name('yourgainz.menuimc');
-Route::get('/routines', [YourGainzController::class, 'routines'])->name('yourgainz.routines');
-Route::get('/menumain', [YourGainzController::class, 'menumain'])->name('yourgainz.menumain');
-Route::get('/exercises', [YourGainzController::class, 'exercises'])->name('yourgainz.exercises');
+    Route::get('/imc', [YourGainzController::class, 'menuimc'])->name('yourgainz.menuimc');
+    Route::get('/routines', [YourGainzController::class, 'routines'])->name('yourgainz.routines');
+    Route::get('/menumain', [YourGainzController::class, 'menumain'])->name('yourgainz.menumain');
+    Route::get('/exercises', [YourGainzController::class, 'exercises'])->name('yourgainz.exercises');
+    Route::get('/recommendedroutines', [YourGainzController::class, 'recommendedroutines'])->name('yourgainz.recommendedroutines');
 });
 
 
@@ -36,4 +37,4 @@ Route::get('/exercise/{muscle}', [ExerciseController::class, 'getExercises']);
 
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
