@@ -1,5 +1,5 @@
-<section class="space-y-6">
-    <header>
+<section class="space-y-6 sm:p-8 sm:rounded-lg bg-black bg-opacity-10 p-8 rounded-2xl shadow-md filter backdrop-blur-sm">
+    <header id ="header">
         <h2 class="text-lg font-medium text-gray-100">
             {{ __('Eliminar Cuenta') }}
         </h2>
@@ -11,7 +11,7 @@
 
     <x-danger-button
         x-data=""
-        x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
+        x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion');"
     >
         {{ __('Eliminar Cuenta') }}
     </x-danger-button>

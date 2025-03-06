@@ -37,7 +37,7 @@
     x-on:keydown.escape.window="show = false"
     x-on:keydown.tab.prevent="$event.shiftKey ? prevFocusable().focus() : nextFocusable().focus()"
     x-show="show"
-    class="fixed inset-0 z-50 flex items-center justify-center px-4 sm:px-0"
+    class="fixed inset-0 z-50 flex items-center justify-center px-4 sm:px-0 bg-black"
 >
     <div class="fixed inset-0 bg-gray-500  bg-gray-900 opacity-75"
         x-show="show" x-on:click="show = false"
