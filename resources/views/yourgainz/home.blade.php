@@ -8,7 +8,7 @@
             </div>
             <div class="hidden md:flex justify-center items-center rounded-lg relative">
                 <div class="relative w-48 h-48 lg:w-64 lg:h-64 rounded-full overflow-hidden">
-                    <img src="https://avatarfiles.alphacoders.com/123/123728.jpg"
+                    <img src="https://res.cloudinary.com/dd5hetwb8/image/upload/unnamed_1_h9drh3.png"
                         class="w-full h-full object-cover rounded-full" alt="User">
                 </div>
                 <div class="p-4 bg-[#ffffffd3] rounded-xl text-black shadow-lg ml-[-108px] lg:ml-[-128px] pl-20 lg:pl-24 h-48 w-3/4 lg:h-64 flex flex-col justify-center">
@@ -32,6 +32,12 @@
                    class="bg-[#FFF700] hover:bg-[#e2dc2e] text-gray-900 font-bold py-2 px-4 rounded-3xl flex items-center justify-center w-full md:w-40">
                     <i class="fas fa-eye mr-2"></i> IMC
                 </a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="bg-[#FFF700] hover:bg-[#e2dc2e] text-gray-900 font-bold py-2 px-4 rounded-3xl flex items-center justify-center w-full md:w-40">
+                        <i class="fas fa-sign-out-alt mr-2"></i> SALIR
+                    </button>
+                </form>
             </div>
         </div>
     </div>

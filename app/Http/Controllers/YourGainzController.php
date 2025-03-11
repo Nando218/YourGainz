@@ -9,8 +9,8 @@ class YourGainzController extends Controller
     public function home(){
         return view('yourgainz.home');
     }
-    public function menuimc(){
-        return view('yourgainz.menuimc');
+    public function menumain(){
+        return view('yourgainz.menumain');
     }
     public function routines(){
         return view('yourgainz.routines');
