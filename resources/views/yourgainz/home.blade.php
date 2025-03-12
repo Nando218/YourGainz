@@ -32,12 +32,6 @@
                    class="bg-[#FFF700] hover:bg-[#e2dc2e] text-gray-900 font-bold py-2 px-4 rounded-3xl flex items-center justify-center w-full md:w-40">
                     <i class="fas fa-eye mr-2"></i> IMC
                 </a>
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <button type="submit" class="bg-[#FFF700] hover:bg-[#e2dc2e] text-gray-900 font-bold py-2 px-4 rounded-3xl flex items-center justify-center w-full md:w-40">
-                        <i class="fas fa-sign-out-alt mr-2"></i> SALIR
-                    </button>
-                </form>
             </div>
         </div>
     </div>

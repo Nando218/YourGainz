@@ -43,10 +43,9 @@
                 {{ $slot }}
             </main>
         </div>
+        <form method="POST" action="/logout" class="hidden">
+            @csrf
+            <button type="submit">Logout</button>
+        </form>
     </body>
 </html>
-
-<form method="POST" action="/logout">
-    @csrf
-    <button type="submit">Logout</button>
-</form>
